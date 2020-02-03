@@ -1,0 +1,30 @@
+{
+  "name": "tsproj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "node_modules/.bin/webpack --mode production",
+    "dev": "node_modules/.bin/webpack-dev-server --mode development --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mater789/tsproj.git"
+  },
+  "author": "mater",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mater789/tsproj/issues"
+  },
+  "homepage": "https://github.com/mater789/tsproj#readme",
+  "devDependencies": {
+    "ts-loader": "^5.2.1",
+    "typescript": "~3.4.5",
+    "webpack": "^4.29.3",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-cli": "^3.1.2",
+    "html-webpack-plugin": "^3.2.0",
+    "copy-webpack-plugin": "^4.5.2"
+  }
+}
