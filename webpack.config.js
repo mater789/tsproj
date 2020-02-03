@@ -3,9 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.ts',
-    target: "node",
-    devtool: 'inline-source-map',
+    context: path.resolve(__dirname, 'src'),
+    entry: {
+        app: './index.ts'
+    },
+    devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -24,7 +26,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: path.resolve(__dirname, './dist/index.html'),
-            template: "./src/index.html",
+            template: "index.html",
             title: 'matertest'
         }),
         new CopyWebpackPlugin([{from: path.resolve(__dirname, './src/assets'), to: 'assets'}])
